@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+*, 
+*::after, 
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+/* ### Primary */
+--Blue: hsl(223, 87%, 63%);
+
+/* ### Secondary */
+--Pale-Blue: hsl(223, 100%, 88%);
+--Light-Red: hsl(354, 100%, 66%);
+
+/* ### Neutral */
+--Gray: hsl(0, 0%, 59%);
+--Very-Dark-Blue: hsl(209, 33%, 12%);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.wrapper {
+    padding: 2rem;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    padding: 4rem 0 2.5rem;
+}
+.logo .ping {
+    margin: auto;
+    width: 80%;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-bottom: 1rem;
+}
+.head .gray {
+    color: var(--Gray);
+    font-weight: 300;
+}
+.sub {
+    font-size: .9rem;
+    padding-bottom: 2rem;
+}
+
+.form-control {
+    position: relative;  
+}
+.email {
+    font-size: .85rem;
+    font-family: inherit;
+    padding: .7rem 1.5rem;
+    border: 1px solid var(--Pale-Blue);
+    border-radius: 1.5rem;
+    outline: none;
+    margin-bottom: .8rem;
+    width: 100%;
+}
+.email::placeholder {
+    color: var(--Pale-Blue);
+}
+.invalid .email {
+    border: 1px solid var(--Light-Red);
+    margin-bottom: 2rem;
+}
+small {
+    visibility: hidden;
+    font-style: italic;
+    color: var(--Light-Red);
+    text-align: center;
+    font-size: .7rem;
+    font-weight: 600;
+    margin-bottom: .8rem;  
+}
+.invalid small {
+    visibility: visible;
+    margin-bottom: 2rem;
+    position: absolute;
+    top: 2.5rem;
+    left: 1rem;
+}
+
+.btn {
+    color: #fff;
+    font-size: .85rem;
+    font-family: inherit;
+    font-weight: 600;
+    padding: .8rem 3rem;
+    background: var(--Blue);
+    border: none;
+    border-radius: 1.5rem;
+    box-shadow: 0px 3px 8px hsl(223, 68%, 67%);
+    cursor: pointer;
+    width: 100%;
+}
+
+.image {
+    margin: 4rem auto 6rem;
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.fa-brands {
+    font-size: 1.5rem;
+    color: var(--Blue);
+    cursor: pointer;
+}
+
+.lastly {
+    font-size: .8rem;
+    color: var(--Gray);
+    padding-top: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    .content {
+        max-width: 40rem;
+    }
+    .logo {
+        padding-top: 2rem;
+    }
+    .logo .ping {
+        width: 100%;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    .sub, .lastly {
+        font-size: 1.25rem;
+    }
+    .form-control {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: .5rem;
+        position: relative;
+    }
+    .email {
+       padding-block: 1rem;
+       margin-bottom: 0;
+       width: 25rem;
+    }
+    .invalid .email {
+        margin-bottom: 0;
+    }
+    .btn {
+        padding-block: 1rem;
+        width: 30%;
+    }
+    .image .dash {
+        max-width: 40rem; 
+        width: 95%;
+        margin: auto; 
+    }
+    .invalid small {
+        margin-bottom: 0;
+        position: absolute;
+        top: 3.3rem;
+        left: 1.5rem;
+    }
+    
+}
